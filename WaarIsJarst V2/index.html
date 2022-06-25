@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+
+
+    <head>
+
+        <style>
+
+            @keyframes  splashIn{
+                from {font-size: 0px;}
+                to {font-size: 50pt;}
+            }
+
+            *  {
+                padding: 0;
+                margin: 0;
+            }
+
+            body {
+                background: whitesmoke;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: 'Roboto Slab', sans-serif;
+            }
+
+            .container {
+                color: whitesmoke;
+                background-color: #ff6464;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                height: auto;
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+
+            #jarst-act {
+                align-items: center;
+                font-family: 'Roboto Slab', sans-serif;
+                font-size: 50pt;
+                animation-name: splashIn;
+                animation-duration: .3s;
+            }
+
+        </style>
+
+        <title>Waar is Jarst?</title>
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">
+
+
+    </head>
+
+    <body>
+
+        <div class="container"> 
+
+            <div id="jarst-act"></div>
+
+        </div>
+
+        <script>
+
+            const actplc = ["in de keuken", "op het toilet", "in het zwembad", "thuis", "in de Action", "in jouw huis", "op de kermis", "op Feniks", "in de Albert Heijn", "bij de kapper", "in de dierentuin", "aan het kletsen in de stad", "sleutels aan het zoeken in de hal", "bij een furry convention", "koekjes aan het bakken", "de stoep aan het vegen", "verdwaald", "in de tuin", "bij de snackbar", "zijn auto aan het wassen", "bij de bakker", "in bed", "in de bus en heeft vertraging", "aan het oppassen bij de buren", "in Spanje", "in Parijs", "in Litouwen"];
+            const jarstis = ["Jarst is "];
+
+            const getAct = () => `${jarstis} ${actplc[Math.floor([Math.random() * actplc.length])]}`;
+
+            document.getElementById('jarst-act').innerText = getAct();
+
+        </script>
+
+    </body>
+
+
+
+</html>
